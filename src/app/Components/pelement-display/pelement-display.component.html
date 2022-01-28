@@ -1,0 +1,22 @@
+<div class="elementBigBox">
+    <div class="elementBox" [style.background-color]="GetColor(Element.cpkHexColor)">
+        <h2>{{Element.atomicNumber}}</h2>
+        <h1>{{Element.symbol}}</h1>
+        <h2>{{Element.name}}</h2>
+        <h2>{{Element.atomicMass}}</h2>
+    </div>
+    <div class="display-grid">
+        <p>Name: <strong>{{Element.name}}</strong></p>
+        <p>Atomic Number: <strong>{{Element.atomicNumber}}</strong></p>
+        <p>Symbol: <strong>{{Element.symbol}}</strong></p>
+        <p>Group: <strong>{{Element.groupBlock}}</strong></p>
+        <p>Mass: <strong>{{Element.atomicMass}}</strong></p>
+        <p>Radius: <strong>{{Element.atomicRadius}}</strong></p>
+        <p>State: <strong>{{Element.standardState}}</strong></p>
+        <p>Year Discovered: <strong>{{Element.yearDiscovered}}</strong></p>
+        <p>Melting Point: <strong>{{Element.meltingPoint}}K</strong></p>
+        <p>Boiling Point: <strong>{{Element.boilingPoint}}K</strong></p>
+        <p>Electrone Gativity: <strong>{{Element.electronegativity}}</strong></p>
+        <p>density: <strong>{{Element.density}}</strong></p>
+    </div>
+</div>

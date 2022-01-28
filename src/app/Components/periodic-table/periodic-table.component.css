@@ -1,0 +1,130 @@
+.PT-Grid {
+    grid-column: 2 / 19;
+    grid-row: 2 / 12;
+    display: grid;
+    grid-template-columns: repeat(18, 80px);
+    grid-template-rows: repeat(10, 85px);
+    grid-gap: 5px;
+    background-color: white;
+}
+
+.PT-Grid .Element {
+    padding: 3px;
+    transition: 0.3s;
+    box-shadow: inset 0px 0px 0 2px #0000003b;
+    border-radius: 2px;
+}
+
+.PT-Grid .Element:hover {
+    box-shadow: inset 0px 0px 0 3px #00000093;
+    transform: scale(1.1);
+}
+
+.PT-Grid .Element p {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.PT-Grid .Element h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.PT-Grid .Metali {
+    grid-row: 6 / 11;
+    grid-column: 3;
+    background-color: #cceeff;
+    border: 3px solid #aaaaff;
+}
+
+.PT-Grid .Metali div {
+    height: 88px;
+}
+
+.PT-Grid .Metali h1 {
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 20px;
+}
+
+.BoxMid {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid lightgrey;
+}
+
+.topBar {
+    grid-row: 1;
+    grid-column: 2 / 20;
+    grid-gap: 5px;
+    display: grid;
+    grid-template-rows: 85px;
+    grid-template-columns: repeat(18, 80px);
+    width: fit-content;
+    text-align: center;
+}
+
+.topBar h1 { 
+    line-height: 80px;
+}
+
+.sideBar {
+    grid-row: 2 / 12;
+    grid-column: 1;
+    grid-gap: 5px;
+    display: inline-grid;
+    grid-template-rows: repeat(8, 85px);
+    grid-template-columns: 80px;
+    width: fit-content;
+    text-align: center;
+}
+
+.sideBar h1 { 
+    line-height: 80px;
+}
+
+.test {
+    display: grid;
+    grid-template-rows: repeat(12, 85px);
+    grid-template-columns: repeat(20, 80px);
+}
+
+.StateSelect {
+    grid-row: 1 / 4;
+    grid-column: 3;
+}
+
+.StateSelect div {
+    height: 50px;
+    line-height: 45px;
+    margin: 5px 0px;
+    transition: 0.3s;
+    text-align: center;
+    border: black 1px solid;
+}
+
+.StateSelect div:hover {
+    transform: scale(1.1);
+}
+
+.StateSelect .gas:hover {
+    background-color: #47cb34;
+}
+
+.StateSelect .solid:hover {
+    background-color: #d97d26;
+}
+
+.StateSelect .liquid:hover {
+    background-color: #3090ff;
+}
+
+.StateSelect .unknown:hover {
+    background-color: #ff4c92;
+}

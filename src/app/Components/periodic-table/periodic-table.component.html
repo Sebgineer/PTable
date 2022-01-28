@@ -1,0 +1,55 @@
+<div class="BoxMid">
+    <div class="test">
+    <div class="sideBar">
+        <h1 *ngFor="let item of ' '.repeat(7).split(''), let x = index">
+            {{x + 1}}
+        </h1>
+    </div>
+    <div class="topBar">
+        <h1 *ngFor="let item of ' '.repeat(18).split(''), let x = index">
+            {{x + 1}}
+        </h1>
+    </div>
+    <div class="PT-Grid">
+    <div class="StateSelect">
+        <div class="gas" (mouseenter)="StateColor('gas','47cb34')" (mouseleave)="ColorReset()">Gas</div>
+        <div class="solid" (mouseenter)="StateColor('solid','d97d26')"  (mouseleave)="ColorReset()">Solid</div>
+        <div class="liquid" (mouseenter)="StateColor('liquid','3090ff');"  (mouseleave)="ColorReset()">Liquid</div>
+        <div class="unknown" (mouseenter)="StateColor('unknown','ff4c92');"  (mouseleave)="ColorReset()">Unknown</div>
+    </div>
+    <app-pelement-display [Element]="selectedElement" style="grid-column: 4 / 12; grid-row: 1 / 4;"></app-pelement-display>
+    <div style="grid-row: 9;"></div><div style="grid-row: 9;"></div><div style="grid-row: 10;"></div><div style="grid-row: 10;"></div>
+    <div class="Metali">
+        <div>
+            <h1>57 - 71</h1>
+        </div>
+        <div>
+            <h1>89 - 103</h1>
+        </div>
+        <div></div>
+        <div>
+            <h1>6</h1>
+        </div>
+        <div>
+            <h1>7</h1>
+        </div>
+    </div>
+    <ng-template [ngIf]="true" *ngFor="let pElement of pElements; index as i;">
+        <div (click)="OnElementClick(i)" class="Element" *ngIf="checkNumber(pElement.atomicNumber); else kage" [style.grid-column]="pElement.group" [style.grid-row]="pElement.period" [style.background-color]="GetColor(pElement.color!)" >
+            <p>{{pElement.atomicNumber}}</p>
+            <h1>{{pElement.symbol}}</h1>
+            <p>{{pElement.name}}</p>
+            <p>{{pElement.atomicMass}}</p>
+        </div>
+        <ng-template #kage>
+            <div (click)="OnElementClick(i)" class="Element" [style.grid-row]="pElement.period + 3" [style.background-color]="GetColor(pElement.color!)" >
+                <p>{{pElement.atomicNumber}}</p>
+                <h1>{{pElement.symbol}}</h1>
+                <p>{{pElement.name}}</p>
+                <p>{{pElement.atomicMass}}</p>
+            </div>
+        </ng-template>
+    </ng-template>
+    </div>
+    </div>
+</div>
